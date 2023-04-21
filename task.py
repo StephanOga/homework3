@@ -1,7 +1,7 @@
 from random import randint
 
 a = int (input("Ввведите длинну массива "))
-b = int (input("Ввведите число которое надонайти "))
+b = int (input("Ввведите число которое надо найти "))
 array = []
 count = 0
 for i in range(a):
