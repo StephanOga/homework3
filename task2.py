@@ -1,17 +1,16 @@
-import random
+from  random import randint
 
 n = int(input('Введите размер массива : '))
-
-a = []
-a.append(random.randint(1,n))
-for i in range(1,n):
-    a.append(random.randint(1,20))
+a = [randint(1,11) for i in range(n)]
 print(a)
 x = int(input('Введите какое число надо найти : '))
+min_diff = abs(x-a[0])
+closest = a[0]
 
+for i in a:
+    diff = abs(x-i)
+    if diff < min_diff:
+        min_diff = diff
+        closest = i
 
-for i in range(1,n):
-    if a[i] == x:
-        y = i
-
-print(a[y-1])
+print("Ближайший элемет к числу", x , "в массиве",a,"равен" , closest )
